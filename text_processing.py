@@ -65,7 +65,7 @@ def no_vowels(input_string):
 
     # answer 1
     import re
-    no_vowel_string = re.sub('[vowles]', '', input_string)
+    no_vowel_string = re.sub('[aeiouAEIOU]', '', input_string)
 
     # answer 2
     '''
