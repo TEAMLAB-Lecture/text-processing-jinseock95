@@ -61,20 +61,22 @@ def no_vowels(input_string):
             ''W lv Pythn!'
     """
 
+    vowels = 'aeiouAEIOUS'
+
     # answer 1
     import re
-    no_vowel_string = re.sub('[a,e,i,o,u]', '', input_string)
+    no_vowel_string = re.sub('[vowles]', '', input_string)
 
     # answer 2
     '''
-    for rm in ['a', 'e', 'i', 'o', 'u']:
+    for rm in vowels:
         input_string = input_string.replace(rm, '')
     no_vowel_string = input_string
     '''
     
     # answer 3
     '''
-    string = list(filter(lambda x : '' if x in ['a', 'e', 'i', 'o', 'u'] else x, input_string))
+    string = list(filter(lambda x : '' if x in vowles else x, input_string))
     no_vowel_string = ''.join(string)
     '''
     
