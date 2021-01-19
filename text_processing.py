@@ -1,3 +1,5 @@
+# -*- coding: utf8 -*-
+
 #######################
 # Test Processing I   #
 #######################
@@ -33,7 +35,7 @@ def normalize(input_string):
              >>> tp.normalize(input_string2)
              'extra space'
     """
-    normalized_string = None
+    normalized_string = ' '.join(input_string.split()).strip().lower()
     return normalized_string
 
 
@@ -58,5 +60,24 @@ def no_vowels(input_string):
             >>> tp.normalize(input_string2)
             ''W lv Pythn!'
     """
-    no_vowel_string = None
+
+    vowels = 'aeiouAEIOUS'
+
+    # answer 1
+    import re
+    no_vowel_string = re.sub('[aeiouAEIOU]', '', input_string)
+
+    # answer 2
+    '''
+    for rm in vowels:
+        input_string = input_string.replace(rm, '')
+    no_vowel_string = input_string
+    '''
+    
+    # answer 3
+    '''
+    string = list(filter(lambda x : '' if x in vowles else x, input_string))
+    no_vowel_string = ''.join(string)
+    '''
+    
     return no_vowel_string
